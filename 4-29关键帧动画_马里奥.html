@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<title>关键帧动画</title>
+<head>
+<style> 
+@keyframes run{
+	0%   {left:0px;}
+	100% {left:-900px;}
+}
+.wra{
+	position:relative;
+	width:150px;
+	height:150px;
+	overflow:hidden;
+	/*父容器，溢出隐藏*/
+}
+.box{
+	position:absolute;
+	left:0;top:0;
+	width:900px;height:150px;
+	background-image:url('hero.jpg');
+	animation:run 2s steps(6,end) infinite;
+}
+</style>
+</head>
+<body>
+<div class="wra">
+	<div class="box"></div>
+</div>
+</body>
+</html>
